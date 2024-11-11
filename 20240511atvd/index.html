@@ -1,0 +1,97 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Alunos</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Alunos</h1>
+
+        <!-- Formulário de Cadastro -->
+        <form id="formCadastro">
+            <div class="form-group">
+                <label for="cod_turma">Código da Turma:</label>
+                <input type="text" id="cod_turma" name="cod_turma" required>
+            </div>
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" required>
+            </div>
+            <div class="form-group">
+                <label for="rg">RG:</label>
+                <input type="text" id="rg" name="rg" required>
+            </div>
+            <div class="form-group">
+                <label for="telefone_aluno">Telefone do Aluno:</label>
+                <input type="text" id="telefone_aluno" name="telefone_aluno" required>
+            </div>
+            <div class="form-group">
+                <label for="telefone_responsavel">Telefone do Responsável:</label>
+                <input type="text" id="telefone_responsavel" name="telefone_responsavel" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="data_nascimento">Data de Nascimento:</label>
+                <input type="date" id="data_nascimento" name="data_nascimento" required>
+            </div>
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <!-- Tabela de Alunos -->
+        <div id="alunos">
+            <h2>Lista de Alunos Cadastrados</h2>
+            <table id="tabelaAlunos">
+                <thead>
+                    <tr>
+                        <th>Código da Turma</th>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dados dos alunos serão inseridos aqui dinamicamente -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script> 
+
+    
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script> 
+
+    
+    <script>
+
+        
+        const firebaseConfig = {
+            apiKey: "AIzaSyAaHdAYb-McFOVV20NNA1DlBa_R3WMKqs8",
+            authDomain: "bd3-app-joao-vitor-andrade.firebaseapp.com",
+            databaseURL: "https://bd3-app-joao-vitor-andrade-default-rtdb.firebaseio.com",
+            projectId: "bd3-app-joao-vitor-andrade",
+            storageBucket: "bd3-app-joao-vitor-andrade.firebasestorage.app",
+            messagingSenderId: "862989621667",
+            appId: "1:862989621667:web:ec04d13a00a2516490e216",
+            measurementId: "G-2174K87ZME"
+        };
+
+        
+        firebase.initializeApp(firebaseConfig);
+
+        const db = firebase.firestore();
+        console.log(db);
+
+    </script>
+
+    <!-- IMPORTAÇÃO DO ARQUIVO app.js -->
+    <script src="script.js"></script>
