@@ -43,10 +43,9 @@
                 <label for="data_nascimento">Data de Nascimento:</label>
                 <input type="date" id="data_nascimento" name="data_nascimento" required>
             </div>
-            <button type="submit">Cadastrar</button>
+            <button>Cadastrar</button>
         </form>
 
-        <!-- Tabela de Alunos -->
         <div id="alunos">
             <h2>Lista de Alunos Cadastrados</h2>
             <table id="tabelaAlunos">
@@ -55,12 +54,13 @@
                         <th>Código da Turma</th>
                         <th>Nome</th>
                         <th>CPF</th>
-                        <th>Ações</th>
+                        <th>RG</th>
+                        <th>Telefone do aluno</th>
+                        <th>Telefone do responsável</th>
+                        <th>E-mail</th>
+                        <th>Data de nascimento</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <!-- Dados dos alunos serão inseridos aqui dinamicamente -->
-                </tbody>
             </table>
         </div>
     </div>
@@ -68,7 +68,7 @@
 <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script> 
 
     
-    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script> 
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script> 
 
     
     <script>
